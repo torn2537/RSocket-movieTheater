@@ -85,29 +85,4 @@ class RSocketTest {
             .expectNextMatches { it.sceneDescription == "Fifth scene" }
             .verifyComplete()
     }
-//    @Test
-//    fun tvPlayMovie() {
-//        val movieSceneFlux: Flux<Int> = Flux.just(1, 2, 3, 4, 5)
-//        val tvFlux: Flux<MovieScene> = Mono.just(this.rSocketRequester)
-//            .map {
-//                it.route("tv.stream")
-//                    .data(movieSceneFlux)
-//            }.flatMapMany {
-//                it.retrieveFlux(MovieScene::class.java)
-//            }.doOnNext {
-//                println("TV: ${it.sceneDiscription}")
-//            }
-//
-//        StepVerifier.create(tvFlux)
-//            .expectNextMatches { it.sceneDiscription == "Scene 1" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 2" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 3" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 4" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 5" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 4" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 2" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 1" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 1" }
-//            .expectNextMatches { it.sceneDiscription == "Scene 4" }
-//    }
 }
